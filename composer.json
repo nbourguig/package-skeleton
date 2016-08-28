@@ -1,0 +1,37 @@
+{
+    "name": ":vendor_name/:package_name",
+    "description": ":package_description",
+    "homepage": "https://github.com/:vendor_name/:package_name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":author_name",
+            "email": ":author_email",
+            "homepage": ":author_website",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            ":vendor\\package_namespace:\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "vendor\\:package_namespace\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
